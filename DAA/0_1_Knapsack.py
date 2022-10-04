@@ -16,8 +16,15 @@ def knapSack(W, wt, val, n):
  
  
 # Driver code
-val = [20,21,12,10]
-wt = [10,5,7,6]
+val = []
+wt = []
+W = int(input("Enter capacity of knapsack "))
+WT = int(input("Enter number of weights "))
+for i in range(WT):
+    x = int(input("Enter Weight "))
+    y = int(input("Enter Profit "))
+    wt.append(x)
+    val.append(y)
 
     
 n = len(val)
