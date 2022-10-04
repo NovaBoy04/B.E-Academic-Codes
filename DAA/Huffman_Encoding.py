@@ -9,7 +9,21 @@ class node:
  
         # node left of current node
         self.left = left
+     def printNodes(node, val=''):
+    # huffman code for current node
+    newVal = val + str(node.huff)
  
+    # if node is not an edge node
+    # then traverse inside it
+    if(node.left):
+        printNodes(node.left, newVal)
+    if(node.right):
+        printNodes(node.right, newVal)
+ 
+        # if node is edge node then
+        # display its huffman code
+    if(not node.left and not node.right):
+        print(f"{node.symbol} -> {newVal}")
         # node right of current node
         self.right = right
  
